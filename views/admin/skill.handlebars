@@ -1,0 +1,28 @@
+
+{{#each skill}}
+  <form method="post" action="/admin/skill">
+    <input type="text" name="name" placeholder="name" value="{{name}}" required >
+    <br> <br>
+    <input type="text" name="className" placeholder="className" value="{{className}}" required >
+    <br> <br>
+    <input type="number" max="10" name="rate" placeholder="rate" value="{{rate}}" required >
+    <br> <br>
+    <input type="hidden" name="guidId" value={{id}} >
+    <input type="submit" value="Edit et" >
+    <a href="/admin/skillDelete/{{id}}">Sil</a>
+</form>
+<br> 
+{{/each}}
+
+<h1>-----------------Create-----------------------</h1>
+
+<form method="post" action="/admin/skillAdd">
+    <input type="text" name="name" placeholder="name" required >
+    <br> <br>
+    <input type="text" name="className" placeholder="className" required >
+    <br> <br>
+    <input type="number" max="10" name="rate" placeholder="rate" required >
+    <br> <br>
+    <input type="submit" value="Create" >
+</form>
+<br> <br> <br>

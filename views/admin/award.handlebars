@@ -1,0 +1,20 @@
+
+{{#each award}}
+  <form method="post" action="/admin/award">
+    <textarea name="description" required placeholder="descriptionv">{{description}}</textarea>
+    <br> <br>
+    <input type="hidden" name="guidId" value={{id}} >
+    <input type="submit" value="Edit et" >
+    <a href="/admin/awardDelete/{{id}}">Sil</a>
+</form>
+<br> 
+{{/each}}
+
+<h1>-----------------Create-----------------------</h1>
+
+<form method="post" action="/admin/awardAdd">
+    <input type="text" name="description" placeholder="description" required >
+    <br> <br>
+    <input type="submit" value="Create" >
+</form>
+<br> <br> <br>

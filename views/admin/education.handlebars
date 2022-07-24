@@ -1,0 +1,40 @@
+
+{{#each education}}
+  <form method="post" action="/admin/education">
+    <input type="text" name="location" placeholder="location" value="{{location}}" required >
+    <br> <br>
+    <input type="text" name="degree" placeholder="degree" value="{{degree}}" required >
+    <br> <br>
+    <input type="text" name="specality" placeholder="specality" value="{{specality}}" required >
+    <br> <br>
+    <input type="number" max="100" name="grade" placeholder="grade" value="{{grade}}" required >
+    <br> <br>
+    <input type="date" name="beginDate" placeholder="beginDate" value="{{beginDate}}" required >
+    <br> <br>
+    <input type="date" name="endDate" placeholder="endDate" value="{{endDate}}" >
+    <br> <br>
+    <input type="hidden" name="guidId" value={{id}} >
+    <input type="submit" value="Edit et" >
+    <a href="/admin/educationDelete/{{id}}">Sil</a>
+</form>
+<br> 
+{{/each}}
+
+<h1>-----------------Create-----------------------</h1>
+
+<form method="post" action="/admin/educationAdd">
+    <input type="text" name="location" placeholder="location" required >
+    <br> <br>
+    <input type="text" name="degree" placeholder="degree" required >
+    <br> <br>
+    <input type="text" name="specality" placeholder="specality" required >
+    <br> <br>
+    <input type="number" max="100" name="grade" placeholder="grade" required >
+    <br> <br>
+    <input type="date" name="beginDate" placeholder="beginDate" required >
+    <br> <br>
+    <input type="date" name="endDate" placeholder="endDate" >
+    <br> <br>
+    <input type="submit" value="Create" >
+</form>
+<br> <br> <br>
